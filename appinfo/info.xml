@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>file_sharing_invalid_notifier</id>
+	<name>File sharing invalid notifier</name>
+	<summary>File sharing invalid notifier</summary>
+	<description>
+		Notify all invalid links by email
+	</description>
+	<version>0.0.1</version>
+	<licence>agpl</licence>
+	<author mail="vitor@php.rio" homepage="https://github.com/vitormattos">Vitor Mattos</author>
+	<namespace>ShareImport</namespace>
+	<category>files</category>
+	<website>https://github.com/librecodecoop/file_sharing_invalid_notifier</website>
+	<bugs>https://github.com/librecodecoop/file_sharing_invalid_notifier/issues</bugs>
+	<repository type="git">https://github.com/librecodecoop/file_sharing_invalid_notifier.git</repository>
+	<dependencies>
+		<nextcloud min-version="22" max-version="24"/>
+	</dependencies>
+</info>
