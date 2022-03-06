@@ -1,0 +1,24 @@
+{
+    "name": "librecode/file_sharing_invalid_notifier",
+    "description": "Notify all invalid links by email",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Vitor Mattos",
+            "email": "vitor@php.rio"
+        }
+    ],
+    "require-dev": {
+        "nextcloud/coding-standard": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCA\\FileSharingInvalidNotifier\\": "src/"
+        }
+    },
+    "scripts": {
+        "lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix"
+    }
+}
