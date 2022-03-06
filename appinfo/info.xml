@@ -10,7 +10,7 @@
 	<version>0.0.1</version>
 	<licence>agpl</licence>
 	<author mail="vitor@php.rio" homepage="https://github.com/vitormattos">Vitor Mattos</author>
-	<namespace>ShareImport</namespace>
+	<namespace>FileSharingInvalidNotifier</namespace>
 	<category>files</category>
 	<website>https://github.com/librecodecoop/file_sharing_invalid_notifier</website>
 	<bugs>https://github.com/librecodecoop/file_sharing_invalid_notifier/issues</bugs>

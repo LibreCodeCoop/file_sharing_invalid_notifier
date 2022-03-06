@@ -1,17 +1,15 @@
 <?php
 
-namespace OCA\ShareImport\AppInfo;
+namespace OCA\FileSharingInvalidNotifier\AppInfo;
 
-// use OCA\ShareImport\Middleware\PublicShareMiddleware;
-
-use OCA\ShareImport\Middleware\MyPublicShareMiddleware;
+use OCA\FileSharingInvalidNotifier\Middleware\PublicShareMiddleware;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'share_import';
+	public const APP_ID = 'file_sharing_invalid_notifier';
 
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::APP_ID, $urlParams);
@@ -22,6 +20,6 @@ class Application extends App implements IBootstrap {
 
 	public function boot(IBootContext $context): void {
 		$filesSharing = \OC::$server->getRegisteredAppContainer('files_sharing');
-		$filesSharing->registerMiddleWare(MyPublicShareMiddleware::class);
+		$filesSharing->registerMiddleWare(PublicShareMiddleware::class);
 	}
 }
