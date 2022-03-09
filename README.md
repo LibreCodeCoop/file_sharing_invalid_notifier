@@ -24,3 +24,4 @@ occ config:app:set file_sharing_invalid_notifier invalid_link_group --value=inva
 ```
 
 > PS: Only users with email will be notified.
+> PS²: You will need configure the [email server](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/email_configuration.html#email) on your instance
