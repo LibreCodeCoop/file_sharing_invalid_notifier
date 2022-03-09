@@ -4,10 +4,12 @@
 	<id>file_sharing_invalid_notifier</id>
 	<name>File sharing invalid notifier</name>
 	<summary>File sharing invalid notifier</summary>
-	<description><![CDATA[Notify all invalid links by email
+	<description><![CDATA[✉️ Notify all invalid links by email
 
 Do you have broken public shared links and want to receive notifications every time when an user access this link?
-- Of-course!
+
+Yes!
+
 Then, install and configure this app and be happy!
 
 Now you can receive notifications of broken links by email.
