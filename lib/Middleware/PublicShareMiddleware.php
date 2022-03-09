@@ -10,18 +10,19 @@ use OCP\IConfig;
 use OCP\IGroup;
 use OCP\IUser;
 use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
+use Swift_TransportException;
 
 class PublicShareMiddleware extends Middleware {
 	/** @var IConfig */
 	private $config;
-	/** @var ContainerInterface */
-	private $container;
+	private $log;
 	public function __construct(
 		IConfig $config,
-		ContainerInterface $container
+		LoggerInterface $log
 	) {
 		$this->config = $config;
-		$this->container = $container;
+		$this->log = $log;
 	}
 
 	public function afterController($controller, $methodName, Response $response) {
@@ -79,7 +80,11 @@ class PublicShareMiddleware extends Middleware {
 			$message->setSubject('Invalid link');
 			$message->setTo([$email => $displayName]);
 			$message->setPlainBody('Invalid link accessed: ' . $token);
-			$mailer->send($message);
+			try {
+				$mailer->send($message);
+			} catch (Swift_TransportException $e) {
+				$this->log->error($e->getMessage(), ['exception' => $e]);
+			}
 		}
 	}
 }
