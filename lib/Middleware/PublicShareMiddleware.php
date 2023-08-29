@@ -9,7 +9,6 @@ use OCP\AppFramework\Middleware;
 use OCP\IConfig;
 use OCP\IGroup;
 use OCP\IUser;
-use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Swift_TransportException;
 
