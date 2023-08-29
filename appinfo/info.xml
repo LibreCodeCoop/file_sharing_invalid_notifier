@@ -28,6 +28,6 @@ Setup instructions on admin documentation.
 	<bugs>https://github.com/librecodecoop/file_sharing_invalid_notifier/issues</bugs>
 	<repository type="git">https://github.com/librecodecoop/file_sharing_invalid_notifier.git</repository>
 	<dependencies>
-		<nextcloud min-version="22" max-version="24"/>
+		<nextcloud min-version="22" max-version="28"/>
 	</dependencies>
 </info>
