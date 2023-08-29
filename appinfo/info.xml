@@ -16,7 +16,7 @@ Now you can receive notifications of broken links by email.
 
 Setup instructions on admin documentation.
 	]]></description>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<licence>agpl</licence>
 	<author mail="vitor@php.rio" homepage="https://github.com/vitormattos">Vitor Mattos</author>
 	<namespace>FileSharingInvalidNotifier</namespace>
