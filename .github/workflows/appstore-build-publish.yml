@@ -60,6 +60,11 @@ jobs:
           cd ${{ env.APP_NAME }}
           composer install --no-dev
 
+      - name: Build ${{ env.APP_NAME }}
+        run: |
+          cd ${{ env.APP_NAME }}
+          make appstore
+
       - name: Check Krankerl config
         id: krankerl
         uses: andstor/file-existence-action@20b4d2e596410855db8f9ca21e96fbe18e12930b # v2
